@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title> Customer Appointment Form </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<form  [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+ 
+<div class="container">
+  <h2 style="text-align: center;">Make An Appointment</h2>
+  <hr>
+   <label class="control-label" >Location</label>
+   <input type="text" formControlName="location" placeholder="Enter the Location" [(ngModel)]="appointment.location"
+      [ngClass]="{'is-invalid':submitted && formData.location.errors}">
+   <div  class="form-group has-error" *ngIf="(formData.location.touched || submitted) && formData.location.errors" class="text-danger">
+     <div class="form-group has-error" *ngIf="formData.location.errors.required">* Location is required</div>
+     <div class="form-group has-error" *ngIf="formData.location.errors.minlength">* The minimum length is 2</div>
+     <div class="form-group has-error" *ngIf="formData.location.errors.maxlength">* The maximum length is 20</div>
+
+    </div>
+   <label>Visit Type</label>
+   <input type="text" formControlName="visitType" placeholder="Enter the Visit Type"[(ngModel)]="appointment.visitType"
+      [ngClass]="{'is-invalid':submitted && formData.visitType.errors}">
+      <div  class="form-group has-error" *ngIf="(formData.visitType.touched || submitted) && formData.visitType.errors" class="text-danger">
+        <div class="form-group has-error" *ngIf="formData.visitType.errors.required">* Visit Type is required</div>
+        <div class="form-group has-error" *ngIf="formData.visitType.errors.minlength">* The minimum length is 2</div>
+        <div class="form-group has-error" *ngIf="formData.visitType.errors.maxlength">* The maximum length is 20</div>
+
+    </div>
+   <label>Preferred Service</label>
+   <input type="text" formControlName="preferredService" placeholder="Enter the Preferred Service"[(ngModel)]="appointment.preferredService" name="preferredService" id="preferredService"
+   [ngClass]="{'is-invalid':submitted && formData.preferredService.errors}">
+   <div  class="form-group has-error" *ngIf="(formData.preferredService.touched || submitted) && formData.preferredService.errors" class="text-danger">
+     <div class="form-group has-error" *ngIf="formData.preferredService.errors.required">* Preferred Service is required</div>
+     <div class="form-group has-error" *ngIf="formData.preferredService.errors.minlength">* The minimum length is 2</div>
+     <div class="form-group has-error" *ngIf="formData.preferredService.errors.maxlength">* The maximum length is 20</div>
+     <div class="form-group has-error" *ngIf="formData.preferredService.errors.pattern">* Enter Alphabets</div>
+
+ </div>
+ <div class="row">
+  <div class="column">
+    <label>Preferred Date</label>
+    <input type="date" formControlName="preferredDate" placeholder="Enter the Preferred Date" [(ngModel)]="appointment.preferredDate" name="preferredDate" id="preferredDate"
+    [ngClass]="{'is-invalid':submitted && formData.preferredService.errors}">
+    <div  class="form-group has-error" *ngIf="(formData.preferredDate.touched || submitted) && formData.preferredDate.errors" class="text-danger">
+      <div class="form-group has-error" *ngIf="formData.preferredDate.errors.required">* Preferred Date is required</div>
+ 
+  </div> 
+</div>
+    
+    <div class="column">
+    <label>Preferred Time</label>
+    <input type="text" formControlName="preferredTime" placeholder="Enter the Preferred Time" [(ngModel)]="appointment.preferredTime" name="preferredTime" id="preferredTime"
+        [ngClass]="{'is-invalid':submitted && formData.preferredTime.errors}">
+    <div  class="form-group has-error" *ngIf="(formData.preferredTime.touched || submitted) && formData.preferredTime.errors" class="text-danger">
+     <div class="form-group has-error" *ngIf="formData.preferredTime.errors.required">* Preferred Time is required</div>
+     <div class="form-group has-error" *ngIf="formData.preferredTime.errors.pattern">* The pattern</div>
+
+</div>
+ </div>
+</div>
+    <button type="submit" class="registerbtn">Make Payment</button>
+
+</div>
+
+</form>
+
+   </body>
+   </html>

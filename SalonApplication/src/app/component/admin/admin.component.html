@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+         
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">  <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                SignOut</a></li>
+          </ul>
+      </nav>
+    <div class="wrapper">
+       
+        <div class="sidebar">
+            <img src="../../../assets/images/admin.png" alt="Avatar" >
+           <ul>
+            <li>
+                <a routerLink="/admin/dashboard">
+                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                    <span class="item">My Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-user-friends"></i></span>
+                    <span class="item">Customers</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/admin/view-allAppointment">
+                    <span class="icon"><i class="fas fa-calendar-plus"></i></span>
+                    <span class="item">Appointments</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="far fa-calendar-plus"></i></span>
+                    <span class="item">Open Appointments</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="item">Services</span>
+                    <!-- <i style="padding-left: 60px;" class="fas fa-chevron-down"></i> -->
+                </a>
+                <!-- <ul class="services" >
+                    <li><a href="" >View Services</a></li>
+                    <li><a href="#">Add Services</a></li>
+                    <li><a href="#">Update Services</a></li>
+                    <li><a href="#">Delete Services</a></li>
+                  </ul> -->
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-tags"></i></span>
+                    <span class="item">Add Services</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-tags"></i></span>
+                    <span class="item">Orders</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-credit-card"></i></span>
+                    <span class="item">Payments</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-user-shield"></i></span>
+                    <span class="item">Profile</span>
+                </a>
+            </li>
+           
+        </ul>
+        </div>
+
+    </div>
+    
+  <div class="main">   
+    <router-outlet> </router-outlet>
+ </div>
+</body>
+</html>

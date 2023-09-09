@@ -1,0 +1,32 @@
+<html>
+ <head>
+    <title> Login form </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+  <body>
+    <form [formGroup]="loginForm" (ngSubmit)="submitData()">
+      <div class="container">
+        <h2 style="text-align: center;">Login Form</h2>
+        <hr class="line">
+        <label class="control-label" >Username:</label>
+          <input type="text" formControlName="username"[(ngModel)]="login.userId"/>
+          <div *ngIf="Username.invalid && (Username.touched || Username.dirty)" class="error">
+            <span *ngIf="Username.errors?.required">**username is requried</span>
+            <span *ngIf="Username.errors?.email" >**username is invalid</span>
+          </div>
+         <label ><b>Password:</b></label>
+         <input type="password" formControlName="Password"[(ngModel)]="login.password"/>
+          <div *ngIf="password.invalid && (password.touched || password.dirty)" class="error">
+            <span *ngIf="password.errors?.required">**This feild cannot be empty</span>
+            <span *ngIf="password.errors?.minlength">**minimum lenght is 4</span>
+          </div>
+  
+        <button type="submit" class="registerbtn">signin</button>
+         
+          <h5 > Dont have an account?
+            <button  (click)="onSignup()" class="signup">signup</button>
+          </h5>
+      </div>
+    </form>
+  </body>
+</html>

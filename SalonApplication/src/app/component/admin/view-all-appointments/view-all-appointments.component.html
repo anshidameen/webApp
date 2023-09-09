@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div>
+  <h3> Appointments</h3>
+</div>
+
+<div class="container-fluid">      
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Appointment ID</th>
+          <th>Customer Name</th>
+          <th>Location</th>
+          <th>VisitType</th>
+          <th>Preferred Service</th>
+          <th>Preferred Date</th>
+          <th>Preferred Time</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{appointment.appointmentId}}</td>
+          <td>{{appointment.customer?.name}}</td>
+          <td>{{appointment.location}}</td>
+          <td>{{appointment.visitType}}</td>
+          <td>{{appointment.preferredService}}</td>
+          <td>{{appointment.preferredDate}}</td>
+          <td>{{appointment.preferredTime}}</td>
+          
+      </tbody>
+    </table>
+  </div>
+  
+  </body>
+  </html>
+  

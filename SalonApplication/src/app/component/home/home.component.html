@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+  <title>Belle & Beau</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+  <script>
+         
+    $(document).ready(function(){
+         
+         $(window).scroll(function(){
+          alert("hi"); 
+           if($(window).scrollTop()>300){
+             $('nav').addClass('navi');
+           }else{
+             $('nav').removeClass('navi');
+           }
+
+         });
+
+    });
+
+ </script>
+
+</head>
+<body style="height:1500px;">
+
+  <section id="home" class="header nav-wrapper" >
+    <div class="overlay">
+        <div class="row">
+           <div class="navbar navbar-default ">  
+                <div class="navbar navbar-expand-lg fixed-top navbar-transparent ">
+                  <div class=logo>
+                    <img src="../../../assets/Belle & Beau-logo.ico" width="28%">
+                  </div>
+                        <div class="menu">
+                              <ul class="nav navbar-nav  ">
+                                <li><a href="#home">Home</a></li>
+                                
+                                <li><a routerLink="/home/service">Services</a></li>
+                                <li><a href="#about_us">About Us</a></li>
+                                <li><a href="#contact_us">Contact Us</a></li>
+                                <li><a routerLink="/home/login">Login</a></li>
+                                
+
+                              </ul>
+                              
+                            </div>  
+                           
+                    </div>
+                   
+              </div>
+              
+         </div>
+        
+        
+        </div>
+
+       
+   
+    <div class="welcometext">
+      <h1 style="font-size: 60px;">Belle & Beau</h1>
+      <h4> Unisex Salon</h4>
+    </div>
+</section>
+
+<!-- Section: about -->
+<section id="about_us" class="aboutus text-center">
+  <div class="heading-about">
+    <h1>About Us</h1>
+    Belle and Beau is a Unisex Salon Avaiable all over India...
+  </div>
+</section>
+<!-- /Section: about -->
+<!-- Section: contact us-->
+<section id="contact_us" class="contactus text-center">
+  <div class="heading-about">
+    <h1>Contact Us</h1>
+    Belle and Beau is a Unisex Salon Avaiable all over Indi
+  </div>
+</section>
+<!-- /Section: contact us -->
+
+</body>
+</html>

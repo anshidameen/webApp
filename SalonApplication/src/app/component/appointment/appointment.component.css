@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    padding:50px 250px 100px 250px;
+ }
+
+.container{
+  padding:50px;
+  border-style:solid;
+  background-color: rgb(216, 212, 255);
+}
+.row {
+   display: flex;
+ }
+ /* Create two equal columns that sits next to each other */
+ .column {
+   flex: 50%;
+   padding: 10px;
+
+ }
+.name{
+   width:35%
+}
+input[type]{
+   width:100%;
+   padding:15px;
+   margin:5px 0 22px 10px;
+   display: inline-block;
+   border: none;
+   background: #f1f1f1;
+   }
+.registerbtn{
+ background-color:MediumSeaGreen;
+ color:white;
+ padding:15px 20px;
+ border:none;
+ width:50%;
+ margin-left:25%;
+ margin-right:25%;
+ 
+}
+@media screen and (min-width: 300px) {
+  form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding:10px 10px 10px 10px;
+     
+  }
+}
